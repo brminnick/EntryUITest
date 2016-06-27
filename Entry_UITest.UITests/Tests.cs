@@ -29,7 +29,7 @@ namespace Entry_UITest.UITests
 		}
 
 		[Test]
-		public void TypeInEntry()
+		public void EnterText()
 		{
 			//Arrange
 			string typedText = "Hello world!";
@@ -39,7 +39,10 @@ namespace Entry_UITest.UITests
 			app.Tap(MyEntry);
 			app.ClearText();
 			app.ClearText();
+			app.Screenshot("Entry Tapped");
+
 			app.EnterText(typedText);
+			app.Screenshot($"Entered Text: {MyEntry}");
 
 			//Assert
 			retrievedText = app.Query(MyEntry)[0].Text;

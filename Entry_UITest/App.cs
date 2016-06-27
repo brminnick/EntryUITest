@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Entry_UITest
 {
@@ -13,7 +11,7 @@ namespace Entry_UITest
 			{
 				Placeholder = "Enter Text Here",
 				Keyboard = Keyboard.Email,
-				AutomationId = "MyEntry"
+				AutomationId = "MyEntry",
 			};
 
 			MainPage = new ContentPage
