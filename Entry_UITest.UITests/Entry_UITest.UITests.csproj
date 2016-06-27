@@ -48,6 +48,10 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Entry_UITest\Entry_UITest.csproj">
+      <Project>{1AF1DA0E-563E-4B5B-95E4-177632D433F4}</Project>
+      <Name>Entry_UITest</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests.cs" />
