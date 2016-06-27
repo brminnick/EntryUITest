@@ -11,9 +11,9 @@ namespace EmailKeyboard_UITest
 			// The root page of your application
 			var emailKeyboardEntry = new Entry
 			{
-				Placeholder = "This should display an email keyboard",
+				Placeholder = "Enter Text Here",
 				Keyboard = Keyboard.Email,
-				AutomationId = "EmailKeyboard"
+				AutomationId = "MyEntry"
 			};
 
 			MainPage = new ContentPage

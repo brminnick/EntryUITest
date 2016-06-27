@@ -1,9 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
+
+using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace EmailKeyboard_UITest.UITests
 {
@@ -14,9 +13,13 @@ namespace EmailKeyboard_UITest.UITests
 		IApp app;
 		Platform platform;
 
+		Query MyEntry;
+
 		public Tests(Platform platform)
 		{
 			this.platform = platform;
+
+			MyEntry = x => x.Marked("MyEntry");
 		}
 
 		[SetUp]
@@ -33,13 +36,13 @@ namespace EmailKeyboard_UITest.UITests
 			string retrievedText;
 
 			//Act
-			app.Tap(x => x.Marked("EmailKeyboard"));
+			app.Tap(MyEntry);
 			app.ClearText();
 			app.ClearText();
 			app.EnterText(typedText);
 
 			//Assert
-			retrievedText = app.Query(x => x.Marked("EmailKeyboard"))[0].Text;
+			retrievedText = app.Query(MyEntry)[0].Text;
 			Assert.AreEqual(typedText,retrievedText, "The typed text does not match the text displayed on the screen");
 		}
 
