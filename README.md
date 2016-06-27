@@ -4,12 +4,12 @@ This app shows how to implement UITest in a Xamarin.Forms project.
 
 In the Views, we've added AutomationId to each control to show how UITest can interact with controls using their AutomationId.
 
-Author
+### Author
 Brandon Minnick
 
 Xamarin Customer Success Engineer
 
-Licensing
+### Licensing
 
 MIT License
 
