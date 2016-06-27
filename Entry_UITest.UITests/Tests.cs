@@ -4,7 +4,7 @@ using Xamarin.UITest;
 
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
-namespace EmailKeyboard_UITest.UITests
+namespace Entry_UITest.UITests
 {
 	[TestFixture(Platform.Android)]
 	[TestFixture(Platform.iOS)]

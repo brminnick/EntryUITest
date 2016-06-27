@@ -109,12 +109,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmailKeyboard_UITest\EmailKeyboard_UITest.csproj">
-      <Project>{1AF1DA0E-563E-4B5B-95E4-177632D433F4}</Project>
-      <Name>Entry_UITest</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
@@ -132,6 +126,12 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entry_UITest\Entry_UITest.csproj">
+      <Project>{1AF1DA0E-563E-4B5B-95E4-177632D433F4}</Project>
+      <Name>Entry_UITest</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

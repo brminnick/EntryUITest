@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using UIKit;
 
-using Foundation;
-using UIKit;
-
-namespace EmailKeyboard_UITest.iOS
+namespace Entry_UITest.iOS
 {
 	public class Application
 	{

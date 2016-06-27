@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace EmailKeyboard_UITest
+namespace Entry_UITest
 {
 	public class App : Application
 	{
