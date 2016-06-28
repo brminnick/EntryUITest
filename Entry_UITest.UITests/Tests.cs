@@ -42,7 +42,7 @@ namespace Entry_UITest.UITests
 			app.Screenshot("Entry Tapped");
 
 			app.EnterText(typedText);
-			app.Screenshot($"Entered Text: {MyEntry}");
+			app.Screenshot($"Entered Text: {typedText}");
 
 			//Assert
 			retrievedText = app.Query(MyEntry)[0].Text;
