@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,13 +36,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iOS\EmailKeyboard_UITest.iOS.csproj">
+    <ProjectReference Include="..\iOS\Entry_UITest.iOS.csproj">
       <Project>{5FAB7ED8-E455-4ABD-842B-478F1649C92A}</Project>
       <Name>Entry_UITest.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\EmailKeyboard_UITest.Droid.csproj">
+    <ProjectReference Include="..\Droid\Entry_UITest.Droid.csproj">
       <Project>{1F595B81-B95E-4620-AFC8-FD345751DF61}</Project>
       <Name>Entry_UITest.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
