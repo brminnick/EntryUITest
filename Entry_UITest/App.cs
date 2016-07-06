@@ -4,21 +4,12 @@ namespace Entry_UITest
 {
 	public class App : Application
 	{
-		public App()
-		{
-			// The root page of your application
-			var emailKeyboardEntry = new Entry
-			{
-				Placeholder = "Enter Text Here",
-				Keyboard = Keyboard.Email,
-				AutomationId = "MyEntry",
-			};
+        public App()
+        {
+            // The root page of your application
 
-			MainPage = new ContentPage
-			{
-				Content = emailKeyboardEntry
-			};
-		}
+            MainPage = new Pages.MainPage();
+        }
 
 		protected override void OnStart()
 		{
