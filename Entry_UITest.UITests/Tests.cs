@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 using Xamarin.UITest;
 
@@ -24,7 +25,8 @@ namespace Entry_UITest.UITests
             //In Xamarin.Forms, you set the UI ID by setting the control's "AutomationId"
             //In Xamarin.Android, you set the UI ID by setting the control's "ContentDescription"
             //In Xamarin.iOS, you set the UI ID by setting the control's "AccessibilityIdentifiers"
-            MyEntry = x => x.Marked("MyEntry");
+            
+			MyEntry = x => x.Marked("MyEntry");
             MyLabel = x => x.Marked("MyLabel");
         }
 
@@ -48,11 +50,12 @@ namespace Entry_UITest.UITests
             app.Screenshot("Entry Tapped");
 
             app.EnterText(typedText);
+			app.DismissKeyboard();
             app.Screenshot($"Entered Text: {typedText}");
 
             //Assert
-            retrievedText = app.Query(MyLabel)[0].Text;
-            Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
+            retrievedText = app.Query(MyLabel)[0]?.Text;
+            Assert.AreEqual(typedText, "Wrong", "The typed text does not match the text displayed on the screen");
         }
 
 		[Ignore ("Repl for testing/development only")]
@@ -61,6 +64,25 @@ namespace Entry_UITest.UITests
         {
             app.Repl();
         }
-    }
+
+		[Test]
+		public void NewTest()
+		{
+			app.Tap(x => x.Marked("MyEntry"));
+			app.Screenshot("Tapped on view with class: EntryEditText marked: MyEntry");
+
+			app.ClearText();
+			app.ClearText();
+
+			app.EnterText(x => x.Marked("MyEntry"), "Hello World!");
+			app.Screenshot("Entered text: Hello World!");
+
+			app.DismissKeyboard();
+			app.Screenshot("Dismissed keyboard");
+
+			app.WaitForElement(x => x.Marked("MyLabel"), timeout: TimeSpan.FromSeconds(5));
+			app.Screenshot("AssertionEvent[AppView: Class=Xamarin.TestRecorder.Portable.Models.Class, Id=, Text=Hello World!, Marked=MyLabel, Css=, XPath=, IndexInTree=0, Rect=[Rectangle: Left=0, Top=0, CenterX=539, CenterY=992.5, Width=394, Height=57, Bottom=1021, Right=736]]");
+		}
+	}
 }
 
