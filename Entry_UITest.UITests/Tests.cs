@@ -64,25 +64,6 @@ namespace Entry_UITest.UITests
         {
             app.Repl();
         }
-
-		[Test]
-		public void NewTest()
-		{
-			app.Tap(x => x.Marked("MyEntry"));
-			app.Screenshot("Tapped on view with class: EntryEditText marked: MyEntry");
-
-			app.ClearText();
-			app.ClearText();
-
-			app.EnterText(x => x.Marked("MyEntry"), "Hello World!");
-			app.Screenshot("Entered text: Hello World!");
-
-			app.DismissKeyboard();
-			app.Screenshot("Dismissed keyboard");
-
-			app.WaitForElement(x => x.Marked("MyLabel"), timeout: TimeSpan.FromSeconds(5));
-			app.Screenshot("AssertionEvent[AppView: Class=Xamarin.TestRecorder.Portable.Models.Class, Id=, Text=Hello World!, Marked=MyLabel, Css=, XPath=, IndexInTree=0, Rect=[Rectangle: Left=0, Top=0, CenterX=539, CenterY=992.5, Width=394, Height=57, Bottom=1021, Right=736]]");
-		}
 	}
 }
 
