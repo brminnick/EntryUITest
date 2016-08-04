@@ -25,8 +25,8 @@ namespace Entry_UITest.UITests
 			//In Xamarin.Android, you set the UI ID by setting the control's "ContentDescription"
 			//In Xamarin.iOS, you set the UI ID by setting the control's "AccessibilityIdentifiers"
 
-			MyEntry = x => x.Marked(AutomationIdConstants.LabelAutomationID);
-			MyLabel = x => x.Marked(AutomationIdConstants.EntryAutomationID);
+			MyEntry = x => x.Marked(AutomationIdConstants.EntryAutomationID);
+			MyLabel = x => x.Marked(AutomationIdConstants.LabelAutomationID);
 		}
 
 		[SetUp]
