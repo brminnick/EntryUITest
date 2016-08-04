@@ -42,8 +42,6 @@ namespace Entry_UITest.Pages
                     textLabel
                 }
             };
-
-
         }
     }
 }
