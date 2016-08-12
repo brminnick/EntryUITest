@@ -57,7 +57,7 @@ namespace Entry_UITest.UITests
 			Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
 		}
 
-		//[Ignore ("Repl for testing/development only")]
+		[Ignore ("Repl for testing/development only")]
 		[Test]
 		public void Repl()
 		{
