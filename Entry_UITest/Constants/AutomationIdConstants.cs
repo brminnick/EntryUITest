@@ -3,8 +3,8 @@ namespace Entry_UITest
 {
 	public static class AutomationIdConstants
 	{
-		public static string EntryAutomationID = "MyEntry";
-		public static string LabelAutomationID = "MyLabel";
+		public const string EntryAutomationID = "MyEntry";
+		public const string LabelAutomationID = "MyLabel";
 	}
 }
 
