@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27CC5E57-20BA-45D7-A9E1-9623556B7B0B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Entry_UITest.UITests</RootNamespace>
-    <AssemblyName>EmailKeyboard_UITest.UITests</AssemblyName>
+    <RootNamespace>EntryUITest.UITests</RootNamespace>
+    <AssemblyName>EntryUITest.UITests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -38,7 +38,7 @@
   <ItemGroup>
     <ProjectReference Include="..\iOS\Entry_UITest.iOS.csproj">
       <Project>{5FAB7ED8-E455-4ABD-842B-478F1649C92A}</Project>
-      <Name>Entry_UITest.iOS</Name>
+      <Name>EntryUITest.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
