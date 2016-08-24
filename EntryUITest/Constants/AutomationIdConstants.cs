@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Entry_UITest
+namespace EntryUITest
 {
 	public static class AutomationIdConstants
 	{
