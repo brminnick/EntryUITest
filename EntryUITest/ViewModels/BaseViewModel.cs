@@ -5,19 +5,9 @@ using System.Runtime.CompilerServices;
 
 namespace EntryUITest.ViewModels
 {
-	class BaseViewModel : INotifyPropertyChanged
+	public class BaseViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
-		bool _busy;
-
-		public bool IsBusy
-		{
-			get { return _busy; }
-			set
-			{
-				SetProperty(ref _busy, value);
-			}
-		}
 
 		protected void SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyname = "", Action onChanged = null)
 		{
@@ -30,7 +20,8 @@ namespace EntryUITest.ViewModels
 
 			OnPropertyChanged(propertyname);
 		}
-		public void OnPropertyChanged([CallerMemberName]string name = "")
+
+		void OnPropertyChanged([CallerMemberName] string name = "")
 		{
 			var handle = PropertyChanged;
 			handle?.Invoke(this, new PropertyChangedEventArgs(name));
