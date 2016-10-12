@@ -1,14 +1,20 @@
 ﻿using Xamarin.Forms;
 
+using EntryUITest.Pages;
+
 namespace EntryUITest
 {
 	public class App : Application
 	{
         public App()
         {
-            // The root page of your application
+			// The root page of your application
 
-            MainPage = new Pages.MainPage();
+			MainPage = new NavigationPage(new MainPage())
+			{
+				BarBackgroundColor = Color.FromHex("3192B3"),
+				BarTextColor = Color.White
+			};
         }
 
 		protected override void OnStart()

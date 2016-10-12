@@ -34,7 +34,11 @@ namespace Entry_UITest.UITests
 		[SetUp]
 		public void BeforeEachTest()
 		{
+			string pageTitle = "Main Page";
+
 			app = AppInitializer.StartApp(platform);
+
+			app.WaitForElement(pageTitle);
 		}
 
 		[Test]

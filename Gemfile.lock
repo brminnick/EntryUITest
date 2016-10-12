@@ -79,9 +79,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  calabash-android
-  calabash-cucumber
-  xamarin-test-cloud
+  calabash-android (= 0.8.2)
+  calabash-cucumber (= 0.20.0)
+  xamarin-test-cloud (= 2.0.2)
 
 BUNDLED WITH
    1.13.2
