@@ -3,5 +3,5 @@ Feature: Enter Text
 
   Scenario: Entering text should make it appear on the screen
     Given I am on the main page
-    When I enter Hello World in the entry
-    Then I see Hello World in the label
+    When I enter "Hello World" in the entry
+    Then I see "Hello World" in the label
