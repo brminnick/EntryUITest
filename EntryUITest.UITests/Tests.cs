@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+
+using NUnit.Framework;
 
 using Xamarin.UITest;
 
@@ -58,7 +60,7 @@ namespace Entry_UITest.UITests
 			app.Screenshot($"Entered Text: {typedText}");
 
 			//Assert
-			retrievedText = app.Query(MyLabel)[0]?.Text;
+			retrievedText = app.Query(MyLabel).First()?.Text;
 			Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
 		}
 
