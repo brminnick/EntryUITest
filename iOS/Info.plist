@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Entry_UITest</string>
+	<string>EntryUITest</string>
 	<key>CFBundleName</key>
-	<string>Entry_UITest</string>
+	<string>EntryUITest</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.minnick.entry_uitest</string>
+	<string>com.minnick.entryuitest</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
