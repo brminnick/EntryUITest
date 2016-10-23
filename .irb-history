@@ -1,0 +1,44 @@
+start_test_server_in_background
+wait_for_element_exists("* marked: 'Main Page'")
+query("Main Page")
+query("* marked: Main Page")
+query("* marked: 'Main Page'")
+wait_for_element_exists("* marked: 'Main Page'")
+wait_for_element_exists("* marked: 'Main Page'")
+wait_for_element_exists("* marked:'Main Page'")
+main_page = "* marked:'Main Page'"
+query(main_page)
+wait_for_element_exists(main_page))
+wait_for_element_exists(main_page)
+wait_for(main_page)
+query(main_page)
+query(main_page.first)
+exit
+start_test_server_in_background
+touch("* marked:'MyEntry'")
+ entry = "* marked:'MyEntry''"
+entry
+touch(entry)
+entry
+touch("* marked:'MyEntry'")
+exit
+start_test_server_in_background
+entry = "* marked:'MyEntry'"
+touch(entry)
+wait_for_element_exists(entry)
+exit
+exit
+start_test_server_in_background
+ entry = "* marked:'MyEntry'"
+touch(entry)
+screenshot_and_raise("Entry Tapped")
+screenshotscreenshot("Entry Tapped")
+screenshot("Entry Tapped")
+screenshot("Entry Tapped")
+clear_text(entry)
+wait_for_keyboard
+keyboard_enter_text("Hello World")
+screenshot("Hello World Entered")
+screenshot
+screenshot("test")
+exit

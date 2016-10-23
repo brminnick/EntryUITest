@@ -1,0 +1,5 @@
+# config/cucumber.yml
+##YAML Template
+---
+ios: PLATFORM=ios APP_BUNDLE_PATH=iOS/bin/iPhoneSimulator/Debug/EntryUITestiOS.app -r features/steps/ios -r features/features -r features/support/ios
+android: PLATFORM=android -r features/steps/android -r features/features -r features/support/android

@@ -9,8 +9,8 @@ namespace EntryUITest.Pages
         public MainPage()
         {
             BindingContext = new MainViewModel();
-
-            BackgroundColor = Color.FromHex("2980b9");
+			Title = "Main Page";
+            BackgroundColor = Color.FromHex("4FCAE6");
 
             var emailKeyboardEntry = new Entry
             {

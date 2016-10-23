@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace EntryUITest.ViewModels
 {
-    class MainViewModel : BaseViewModel
-    {
-        string _emailKeyboardEntryText, _textLabelText;
+	class MainViewModel : BaseViewModel
+	{
+		string _emailKeyboardEntryText, _textLabelText;
 
-        public string EmailKeyboardEntryText
-        {
-            get { return _emailKeyboardEntryText; }
-            set
-            {
-                SetProperty<string>(ref _emailKeyboardEntryText, value, "EmailKeyboardEntryText");
-                SetProperty<string>(ref _textLabelText, value, "TextLabelText");
-            }
-        }
+		public string EmailKeyboardEntryText
+		{
+			get { return _emailKeyboardEntryText; }
+			set
+			{
+				SetProperty<string>(ref _emailKeyboardEntryText, value);
+				SetProperty<string>(ref _textLabelText, value, null, "TextLabelText");
+			}
+		}
 
-        public string TextLabelText
-        {
-            get { return _textLabelText; }
-        }
-    }
+		public string TextLabelText
+		{
+			get { return _textLabelText; }
+		}
+	}
 }
