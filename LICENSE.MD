@@ -1,4 +1,4 @@
-###IT Li    cense
+### MIT License
 
 Copyright (c) 2016 Brandon Minnick
 
