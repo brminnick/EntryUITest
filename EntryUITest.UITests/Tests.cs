@@ -60,7 +60,7 @@ namespace Entry_UITest.UITests
 			app.Screenshot($"Entered Text: {typedText}");
 
 			//Assert
-			retrievedText = app.Query(MyLabel).First()?.Text;
+			retrievedText = app.Query(MyLabel).FirstOrDefault()?.Text;
 			Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
 		}
 
