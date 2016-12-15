@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace EntryUITest.ViewModels
 {
 	class MainViewModel : BaseViewModel
@@ -15,8 +10,8 @@ namespace EntryUITest.ViewModels
 			get { return _emailKeyboardEntryText; }
 			set
 			{
-				SetProperty<string>(ref _emailKeyboardEntryText, value);
-				SetProperty<string>(ref _textLabelText, value, null, "TextLabelText");
+				SetProperty(ref _emailKeyboardEntryText, value);
+				SetProperty(ref _textLabelText, value, nameof(TextLabelText));
 			}
 		}
 

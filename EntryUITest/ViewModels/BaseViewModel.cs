@@ -9,7 +9,7 @@ namespace EntryUITest.ViewModels
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		protected void SetProperty<T>(ref T backingStore, T value, Action onChanged = null, [CallerMemberName] string propertyname = "")
+		protected void SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyname = "", Action onChanged = null)
 		{
 			if (EqualityComparer<T>.Default.Equals(backingStore, value))
 				return;
