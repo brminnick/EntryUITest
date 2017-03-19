@@ -11,6 +11,7 @@ namespace EntryUITest.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+			EntryCustomReturn.Forms.Plugin.iOS.CustomReturnEntryRenderer.Init();
 
 			// Code for starting up the Xamarin Test Cloud Agent
 			#if ENABLE_TEST_CLOUD

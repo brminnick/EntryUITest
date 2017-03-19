@@ -1,26 +1,31 @@
-﻿using Xamarin.Forms;
+﻿using System;
+
+using Xamarin.Forms;
 
 using EntryUITest.ViewModels;
 
+using EntryCustomReturn.Forms.Plugin.Abstractions;
+
 namespace EntryUITest.Pages
 {
-	class MainPage : BasePage<MainViewModel>
+	class MainPage : BaseContentPage<MainViewModel>
 	{
 		public MainPage()
 		{
 			Title = "Main Page";
 			BackgroundColor = Color.FromHex("4FCAE6");
 
-			var emailKeyboardEntry = new Entry
+			var goEntry = new CustomReturnEntry
 			{
 				Placeholder = "Enter Text Here",
 				PlaceholderColor = Color.FromHex("749FA8"),
-				Keyboard = Keyboard.Email,
 				AutomationId = AutomationIdConstants.EntryAutomationID,
 				TextColor = Color.FromHex("2C7797"),
-				BackgroundColor = Color.FromHex("91E2F4")
+				BackgroundColor = Color.FromHex("91E2F4"),
+				ReturnType = ReturnType.Done,
+				ReturnCommand = new Command(Unfocus)
 			};
-			emailKeyboardEntry.SetBinding<MainViewModel>(Entry.TextProperty, vm => vm.EmailKeyboardEntryText);
+			goEntry.SetBinding(Entry.TextProperty, nameof(ViewModel.EmailKeyboardEntryText));
 
 			var textLabel = new Label
 			{
@@ -28,9 +33,9 @@ namespace EntryUITest.Pages
 				AutomationId = AutomationIdConstants.LabelAutomationID,
 				HorizontalTextAlignment = TextAlignment.Center
 			};
-			textLabel.SetBinding<MainViewModel>(Label.TextProperty, vm => vm.TextLabelText);
+			textLabel.SetBinding(Label.TextProperty, nameof(ViewModel.TextLabelText));
 
-			Padding = new Thickness(30, Device.OnPlatform(20, 0, 0), 30, 5);
+			Padding = GetPagePadding();
 
 			Content = new StackLayout
 			{
@@ -38,10 +43,23 @@ namespace EntryUITest.Pages
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children =
 				{
-					emailKeyboardEntry,
+					goEntry,
 					textLabel
 				}
 			};
+		}
+
+		Thickness GetPagePadding()
+		{
+			switch (Device.RuntimePlatform)
+			{
+				case Device.iOS:
+					return new Thickness(30, 20, 30, 5);
+				case Device.Android:
+					return new Thickness(30, 0, 30, 5);
+				default:
+					throw new Exception("Platform Unsupported");
+			}
 		}
 	}
 }
