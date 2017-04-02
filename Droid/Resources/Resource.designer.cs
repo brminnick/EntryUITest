@@ -26,7 +26,6 @@ namespace EntryUITest.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::EntryUITest.Droid.Resource.Attribute.actionBarSize;
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Animation.abc_fade_in = global::EntryUITest.Droid.Resource.Animation.abc_fade_in;
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Animation.abc_fade_out = global::EntryUITest.Droid.Resource.Animation.abc_fade_out;
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::EntryUITest.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -1813,6 +1812,7 @@ namespace EntryUITest.Droid
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Styleable.ViewStubCompat_android_id = global::EntryUITest.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::EntryUITest.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::EntryCustomReturn.Forms.Plugin.Android.Resource.Styleable.ViewStubCompat_android_layout = global::EntryUITest.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::EntryUITest.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
