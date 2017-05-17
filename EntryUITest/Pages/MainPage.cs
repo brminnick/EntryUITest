@@ -37,7 +37,7 @@ namespace EntryUITest.Pages
 
 			Padding = GetPagePadding();
 
-			Content = new StackLayout
+			var stackLayout = new StackLayout
 			{
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
@@ -47,6 +47,8 @@ namespace EntryUITest.Pages
 					textLabel
 				}
 			};
+
+            Content = new ScrollView { Content = stackLayout };
 		}
 
 		Thickness GetPagePadding()
