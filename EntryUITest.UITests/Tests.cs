@@ -4,11 +4,11 @@ using NUnit.Framework;
 
 using Xamarin.UITest;
 
-using EntryUITest;
+using EntryUITest.Shared;
 
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
-namespace Entry_UITest.UITests
+namespace EntryUITest.UITests
 {
 	[TestFixture(Platform.Android)]
 	[TestFixture(Platform.iOS)]

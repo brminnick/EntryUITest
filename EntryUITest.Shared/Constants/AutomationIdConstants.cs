@@ -1,5 +1,4 @@
-﻿using System;
-namespace EntryUITest
+﻿namespace EntryUITest.Shared
 {
 	public static class AutomationIdConstants
 	{

@@ -5,23 +5,23 @@ using System.Runtime.CompilerServices;
 
 namespace EntryUITest.ViewModels
 {
-	public class BaseViewModel : INotifyPropertyChanged
-	{
-		public event PropertyChangedEventHandler PropertyChanged;
+    public class BaseViewModel : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
 
-		protected void SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyname = "", Action onChanged = null)
-		{
-			if (EqualityComparer<T>.Default.Equals(backingStore, value))
-				return;
+        protected void SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyname = "", Action onChanged = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return;
 
-			backingStore = value;
+            backingStore = value;
 
-			onChanged?.Invoke();
+            onChanged?.Invoke();
 
-			OnPropertyChanged(propertyname);
-		}
+            OnPropertyChanged(propertyname);
+        }
 
-		void OnPropertyChanged([CallerMemberName] string name = "")=>
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-	}
+        void OnPropertyChanged([CallerMemberName] string name = "") =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
 }
