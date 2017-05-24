@@ -1,8 +1,6 @@
 ﻿using UIKit;
 using Foundation;
 
-using EntryUITest;
-
 namespace EntryUITest.iOS
 {
 	[Register("AppDelegate")]
