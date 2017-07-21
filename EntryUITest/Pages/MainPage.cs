@@ -2,9 +2,9 @@
 
 using Xamarin.Forms;
 
-using EntryUITest.Shared;
-using EntryUITest.ViewModels;
 using EntryCustomReturn.Forms.Plugin.Abstractions;
+
+using EntryUITest.Constants;
 
 namespace EntryUITest.Pages
 {

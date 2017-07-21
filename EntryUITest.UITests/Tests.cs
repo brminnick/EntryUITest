@@ -1,10 +1,9 @@
 ﻿using System.Linq;
-
 using NUnit.Framework;
 
 using Xamarin.UITest;
 
-using EntryUITest.Shared;
+using EntryUITest.Constants;
 
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 

@@ -1,5 +1,4 @@
-﻿
-namespace EntryUITest.ViewModels
+﻿namespace EntryUITest
 {
     class MainViewModel : BaseViewModel
     {
