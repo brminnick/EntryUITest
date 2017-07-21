@@ -59,7 +59,10 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\EntryUITest.Constants\EntryUITest.Constants.csproj">
+      <Project>{583C64D8-C4E8-422E-8D84-B04901F54E85}</Project>
+      <Name>EntryUITest.Constants</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
