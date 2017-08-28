@@ -13,10 +13,10 @@ namespace EntryUITest.UITests
     [TestFixture(Platform.iOS)]
     public class Tests
     {
+		readonly Query MyEntry, MyLabel;
+
         IApp app;
         Platform platform;
-
-        readonly Query MyEntry, MyLabel;
 
         public Tests(Platform platform)
         {
