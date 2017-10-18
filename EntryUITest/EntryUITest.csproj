@@ -9,8 +9,8 @@
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Xamarin.Forms" Version="2.3.5.256-pre6" />
-	  <PackageReference Include="Xam.Plugins.Forms.CustomReturnEntry" Version="3.1.2-pre1" />
+	  <PackageReference Include="Xamarin.Forms" Version="2.4.0.282" />
+	  <PackageReference Include="Xam.Plugins.Forms.CustomReturnEntry" Version="3.1.2" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\EntryUITest.Constants\EntryUITest.Constants.csproj" />
