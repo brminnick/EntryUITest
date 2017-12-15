@@ -13,22 +13,22 @@ namespace EntryUITest.UITests
     [TestFixture(Platform.iOS)]
     public class Tests
     {
-		readonly Query MyEntry, MyLabel;
+        readonly Query _myEntry, _myLabel;
 
-        IApp app;
-        Platform platform;
+        IApp _app;
+        Platform _platform;
 
         public Tests(Platform platform)
         {
-            this.platform = platform;
+            _platform = platform;
 
             //Always initialize your UITest queries using "x.Marked" and referencing the UI ID
             //In Xamarin.Forms, you set the UI ID by setting the control's "AutomationId"
             //In Xamarin.Android, you set the UI ID by setting the control's "ContentDescription"
             //In Xamarin.iOS, you set the UI ID by setting the control's "AccessibilityIdentifiers"
 
-            MyEntry = x => x.Marked(AutomationIdConstants.EntryAutomationID);
-            MyLabel = x => x.Marked(AutomationIdConstants.LabelAutomationID);
+            _myEntry = x => x.Marked(AutomationIdConstants.EntryAutomationID);
+            _myLabel = x => x.Marked(AutomationIdConstants.LabelAutomationID);
         }
 
         [SetUp]
@@ -36,9 +36,9 @@ namespace EntryUITest.UITests
         {
             string pageTitle = "Main Page";
 
-            app = AppInitializer.StartApp(platform);
+            _app = AppInitializer.StartApp(_platform);
 
-            app.WaitForElement(pageTitle);
+            _app.WaitForElement(pageTitle);
         }
 
         [Test]
@@ -49,21 +49,18 @@ namespace EntryUITest.UITests
             string retrievedText;
 
             //Act
-            app.EnterText(MyEntry, typedText);
-            app.DismissKeyboard();
-            app.Screenshot($"Entered Text: {typedText}");
+            _app.EnterText(_myEntry, typedText);
+            _app.DismissKeyboard();
+            _app.Screenshot($"Entered Text: {typedText}");
 
             //Assert
-            retrievedText = app.Query(MyLabel).FirstOrDefault()?.Text;
+            retrievedText = _app.Query(_myLabel).FirstOrDefault()?.Text;
             Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
         }
 
         [Ignore("Repl for testing/development only")]
         [Test]
-        public void Repl()
-        {
-            app.Repl();
-        }
+        public void Repl() => _app.Repl();
     }
 }
 
