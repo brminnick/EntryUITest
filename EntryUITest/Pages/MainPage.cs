@@ -60,7 +60,7 @@ namespace EntryUITest.Pages
 				case Device.Android:
 					return new Thickness(30, 0, 30, 5);
 				default:
-					throw new Exception("Platform Unsupported");
+					throw new NotSupportedException("Platform Unsupported");
 			}
 		}
 	}

@@ -3,23 +3,23 @@ using Foundation;
 
 namespace EntryUITest.iOS
 {
-	[Register("AppDelegate")]
-	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-	{
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-			global::Xamarin.Forms.Forms.Init();
-			EntryCustomReturn.Forms.Plugin.iOS.CustomReturnEntryRenderer.Init();
+    [Register(nameof(AppDelegate))]
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
+        {
+            global::Xamarin.Forms.Forms.Init();
+            EntryCustomReturn.Forms.Plugin.iOS.CustomReturnEntryRenderer.Init();
 
+#if DEBUG
 			// Code for starting up the Xamarin Test Cloud Agent
-			#if ENABLE_TEST_CLOUD
-			Xamarin.Calabash.Start();
-			#endif
+            Xamarin.Calabash.Start();
+#endif
 
-			LoadApplication(new App());
+            LoadApplication(new App());
 
-			return base.FinishedLaunching(app, options);
-		}
-	}
+            return base.FinishedLaunching(uiApplication, launchOptions);
+        }
+    }
 }
 
