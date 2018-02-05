@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest.iOS", "iOS\EntryUITest.iOS.csproj", "{5FAB7ED8-E455-4ABD-842B-478F1649C92A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest.iOS", "EntryUITest.iOS\EntryUITest.iOS.csproj", "{5FAB7ED8-E455-4ABD-842B-478F1649C92A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest.Droid", "Droid\EntryUITest.Droid.csproj", "{1F595B81-B95E-4620-AFC8-FD345751DF61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest.Droid", "EntryUITest.Droid\EntryUITest.Droid.csproj", "{1F595B81-B95E-4620-AFC8-FD345751DF61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest.UITests", "EntryUITest.UITests\EntryUITest.UITests.csproj", "{27CC5E57-20BA-45D7-A9E1-9623556B7B0B}"
 EndProject
