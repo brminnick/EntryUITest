@@ -33,7 +33,7 @@
 	  <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.2.2.2\lib\net45\Xamarin.UITest.dll</HintPath>
+      <HintPath>..\packages\Xamarin.UITest.2.2.4.1779-dev\lib\net45\Xamarin.UITest.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -48,22 +48,19 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Droid\EntryUITest.Droid.csproj">
-      <Project>{1F595B81-B95E-4620-AFC8-FD345751DF61}</Project>
-      <Name>EntryUITest.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\iOS\EntryUITest.iOS.csproj">
+    <ProjectReference Include="..\EntryUITest.iOS\EntryUITest.iOS.csproj">
       <Project>{5FAB7ED8-E455-4ABD-842B-478F1649C92A}</Project>
       <Name>EntryUITest.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\EntryUITest.Constants\EntryUITest.Constants.csproj">
-      <Project>{583C64D8-C4E8-422E-8D84-B04901F54E85}</Project>
-      <Name>EntryUITest.Constants</Name>
+    <ProjectReference Include="..\EntryUITest.Droid\EntryUITest.Droid.csproj">
+      <Project>{1F595B81-B95E-4620-AFC8-FD345751DF61}</Project>
+      <Name>EntryUITest.Droid</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

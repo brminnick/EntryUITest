@@ -2,9 +2,7 @@
 
 using Xamarin.Forms;
 
-using EntryCustomReturn.Forms.Plugin.Abstractions;
-
-using EntryUITest.Constants;
+using EntryUITest.Shared;
 
 namespace EntryUITest.Pages
 {
@@ -15,7 +13,7 @@ namespace EntryUITest.Pages
 			Title = "Main Page";
 			BackgroundColor = Color.FromHex("4FCAE6");
 
-			var goEntry = new CustomReturnEntry
+			var goEntry = new Entry
 			{
 				Placeholder = "Enter Text Here",
 				PlaceholderColor = Color.FromHex("749FA8"),

@@ -15,7 +15,6 @@ namespace EntryUITest.Droid
 			base.OnCreate(savedInstanceState);
 
 			global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-			EntryCustomReturn.Forms.Plugin.Android.CustomReturnEntryRenderer.Init();
 
 			LoadApplication(new App());
 		}

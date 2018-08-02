@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 using Xamarin.UITest;
 
-using EntryUITest.Constants;
+using EntryUITest.Shared;
 
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
