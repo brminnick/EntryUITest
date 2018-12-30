@@ -14,9 +14,9 @@ namespace EntryUITest.UITests
     public class Tests
     {
         readonly Query _myEntry, _myLabel;
+        readonly Platform _platform;
 
         IApp _app;
-        Platform _platform;
 
         public Tests(Platform platform)
         {

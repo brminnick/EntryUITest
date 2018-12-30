@@ -3,12 +3,25 @@ using System.ComponentModel;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
+using AsyncAwaitBestPractices;
+
 namespace EntryUITest
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Constant Fields
+        readonly WeakEventManager _propertyChangedEventManager = new WeakEventManager();
+        #endregion
 
+        #region Events
+        event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+        {
+            add => _propertyChangedEventManager.AddEventHandler(value);
+            remove => _propertyChangedEventManager.RemoveEventHandler(value);
+        }
+        #endregion
+
+        #region Methods
         protected void SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyname = "", Action onChanged = null)
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
@@ -22,6 +35,7 @@ namespace EntryUITest
         }
 
         void OnPropertyChanged([CallerMemberName] string name = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            _propertyChangedEventManager?.HandleEvent(this, new PropertyChangedEventArgs(name), nameof(INotifyPropertyChanged.PropertyChanged));
+        #endregion
     }
 }
