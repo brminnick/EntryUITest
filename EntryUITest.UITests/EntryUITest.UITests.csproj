@@ -1,66 +1,59 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27CC5E57-20BA-45D7-A9E1-9623556B7B0B}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>EntryUITest.UITests</RootNamespace>
-    <AssemblyName>EntryUITest.UITests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-	  <Private>True</Private>
-    </Reference>
-    <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.2.2.7.2001-dev\lib\net45\Xamarin.UITest.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Tests.cs" />
-    <Compile Include="AppInitializer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EntryUITest.iOS\EntryUITest.iOS.csproj">
-      <Project>{5FAB7ED8-E455-4ABD-842B-478F1649C92A}</Project>
-      <Name>EntryUITest.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\EntryUITest.Droid\EntryUITest.Droid.csproj">
-      <Project>{1F595B81-B95E-4620-AFC8-FD345751DF61}</Project>
-      <Name>EntryUITest.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{27CC5E57-20BA-45D7-A9E1-9623556B7B0B}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <RootNamespace>EntryUITest.UITests</RootNamespace>
+        <AssemblyName>EntryUITest.UITests</AssemblyName>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <ConsolePause>false</ConsolePause>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <ConsolePause>false</ConsolePause>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="nunit.framework" Version="2.6.4" />
+        <PackageReference Include="Xamarin.UITest" Version="2.2.7.2001-dev" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Tests.cs" />
+        <Compile Include="AppInitializer.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\EntryUITest.iOS\EntryUITest.iOS.csproj">
+            <Project>{5FAB7ED8-E455-4ABD-842B-478F1649C92A}</Project>
+            <Name>EntryUITest.iOS</Name>
+            <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\EntryUITest.Droid\EntryUITest.Droid.csproj">
+            <Project>{1F595B81-B95E-4620-AFC8-FD345751DF61}</Project>
+            <Name>EntryUITest.Droid</Name>
+            <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+            <Private>False</Private>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

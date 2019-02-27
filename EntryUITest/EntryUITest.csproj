@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>netstandard1.0</TargetFramework>
-		<PackageTargetFallback>portable-win+net45+wp8+win81+wpa8</PackageTargetFallback>
+		<TargetFramework>netstandard2.0</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Folder Include="Pages\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
-	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="2.1.0-pre1" />
+	  <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="2.1.0" />
 	</ItemGroup>
 	<Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
 </Project>
