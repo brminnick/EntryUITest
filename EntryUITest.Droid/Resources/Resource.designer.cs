@@ -1102,7 +1102,6 @@ namespace EntryUITest.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_tablayout = global::EntryUITest.Droid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_toolbar = global::EntryUITest.Droid.Resource.Id.main_toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.masked = global::EntryUITest.Droid.Resource.Id.masked;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.materialformsedittext = global::EntryUITest.Droid.Resource.Id.materialformsedittext;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.media_actions = global::EntryUITest.Droid.Resource.Id.media_actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.message = global::EntryUITest.Droid.Resource.Id.message;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.middle = global::EntryUITest.Droid.Resource.Id.middle;
@@ -1290,8 +1289,6 @@ namespace EntryUITest.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.select_dialog_singlechoice_material = global::EntryUITest.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.ShellContent = global::EntryUITest.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::EntryUITest.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::Xamarin.Forms.Platform.Android.Resource.Layout.TextInputLayoutFilledBox = global::EntryUITest.Droid.Resource.Layout.TextInputLayoutFilledBox;
-			global::Xamarin.Forms.Platform.Android.Resource.Layout.TextInputLayoutOutlinedBox = global::EntryUITest.Droid.Resource.Layout.TextInputLayoutOutlinedBox;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_home_description = global::EntryUITest.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_up_description = global::EntryUITest.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_menu_overflow_description = global::EntryUITest.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -1846,10 +1843,6 @@ namespace EntryUITest.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::EntryUITest.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_MaterialComponents_Toolbar = global::EntryUITest.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_Support_CoordinatorLayout = global::EntryUITest.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialProgressBarCircular = global::EntryUITest.Droid.Resource.Style.XamarinFormsMaterialProgressBarCircular;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialProgressBarHorizontal = global::EntryUITest.Droid.Resource.Style.XamarinFormsMaterialProgressBarHorizontal;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialTextInputLayoutFilledBox = global::EntryUITest.Droid.Resource.Style.XamarinFormsMaterialTextInputLayoutFilledBox;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.XamarinFormsMaterialTheme = global::EntryUITest.Droid.Resource.Style.XamarinFormsMaterialTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar = global::EntryUITest.Droid.Resource.Styleable.ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_background = global::EntryUITest.Droid.Resource.Styleable.ActionBar_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ActionBar_backgroundSplit = global::EntryUITest.Droid.Resource.Styleable.ActionBar_backgroundSplit;
@@ -7432,10 +7425,10 @@ namespace EntryUITest.Droid
 			public const int Tabbar = 2130903123;
 			
 			// aapt resource value: 0x7f030054
-			public const int TextInputLayoutFilledBox = 2130903124;
+			public const int textinputlayoutfilledbox = 2130903124;
 			
 			// aapt resource value: 0x7f030055
-			public const int TextInputLayoutOutlinedBox = 2130903125;
+			public const int textinputlayoutoutlinedbox = 2130903125;
 			
 			// aapt resource value: 0x7f030056
 			public const int Toolbar = 2130903126;
