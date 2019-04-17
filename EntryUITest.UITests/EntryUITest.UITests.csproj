@@ -30,8 +30,8 @@
         <Reference Include="System" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="nunit.framework" Version="2.6.4" />
-        <PackageReference Include="Xamarin.UITest" Version="2.2.7.2002-dev" />
+        <PackageReference Include="Xamarin.UITest" Version="3.0.0-dev1" />
+        <PackageReference Include="NUnit" Version="3.11.0" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Tests.cs" />
