@@ -1,16 +1,8 @@
-[![Build Status](https://www.bitrise.io/app/e30bdb9260ac6cfb/status.svg?token=VwaYCVMKlU0XCMq_FO3_7w&branch=master)](https://www.bitrise.io/app/e30bdb9260ac6cfb)
+# EntryUITest
 
-# Entry UI Test Sample App
+This app shows how to implement [Xamarin.UITest](https://docs.microsoft.com/appcenter/test-cloud/uitest?WT.mc_id=EntryUITest-github-bramin) in a [Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms?WT.mc_id=EntryUITest-github-bramin) project.
 
-This app shows how to implement UITest in a Xamarin.Forms project.
-
-We've added an AutomationId to each control to show how UITest can interact with controls using their AutomationId.
+We've added an [AutomationId](https://docs.microsoft.com/dotnet/api/xamarin.forms.element.automationid?view=xamarin-forms&WT.mc_id=EntryUITest-github-bramin) to each control to show how the UI test can interact with controls using their [AutomationId](https://docs.microsoft.com/dotnet/api/xamarin.forms.element.automationid?view=xamarin-forms&WT.mc_id=EntryUITest-github-bramin).
 
 ### C# 7.0 Compatibility
 The master branch contains features from C# 7.0. If your IDE does not support C# 7.0, you can use [this branch](https://github.com/brminnick/EntryUITest/tree/Remove-C%237), which does not contain C# 7.0 features.
-
-
-### Author
-Brandon Minnick
-
-Xamarin Customer Success Engineer
