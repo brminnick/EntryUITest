@@ -6,7 +6,7 @@ namespace EntryUITest.UITests
 	{
 		public static IApp StartApp(Platform platform)
 		{
-            if (platform == Platform.Android)
+            if (platform is Platform.Android)
                 return ConfigureApp.Android.EnableLocalScreenshots().StartApp();
 
 			return ConfigureApp.iOS.EnableLocalScreenshots().StartApp();

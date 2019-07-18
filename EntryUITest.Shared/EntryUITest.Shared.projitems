@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AutomationIdConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageTitleConstants.cs" />
   </ItemGroup>
 </Project>

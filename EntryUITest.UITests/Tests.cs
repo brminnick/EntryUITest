@@ -34,18 +34,15 @@ namespace EntryUITest.UITests
         [SetUp]
         public void BeforeEachTest()
         {
-            string pageTitle = "Main Page";
-
             _app = AppInitializer.StartApp(_platform);
-
-            _app.WaitForElement(pageTitle);
+            _app.WaitForElement(PageTitleConstants.MainPage);
         }
 
         [Test]
         public void EnterText()
         {
             //Arrange
-            string typedText = "Hello world!";
+            const string typedText = "Hello world!";
             string retrievedText;
 
             //Act
@@ -54,7 +51,7 @@ namespace EntryUITest.UITests
             _app.Screenshot($"Entered Text: {typedText}");
 
             //Assert
-            retrievedText = _app.Query(_myLabel).FirstOrDefault()?.Text;
+            retrievedText = _app.Query(_myLabel).First().Text;
             Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
         }
 

@@ -7,16 +7,16 @@
         #endregion
 
         #region Properties
-        public string TextLabelText => _textLabelText;
+        public string TextLabelText
+        {
+            get => _textLabelText;
+            set => SetProperty(ref _textLabelText, value);
+        }
 
         public string EmailKeyboardEntryText
         {
             get => _emailKeyboardEntryText;
-            set
-            {
-                SetProperty(ref _emailKeyboardEntryText, value);
-                SetProperty(ref _textLabelText, value, nameof(TextLabelText));
-            }
+            set => SetProperty(ref _emailKeyboardEntryText, value, () => TextLabelText = value);
         }
         #endregion
     }
