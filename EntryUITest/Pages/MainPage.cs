@@ -14,6 +14,7 @@ namespace EntryUITest.Pages
 
             var goEntry = new Entry
             {
+                ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
                 Placeholder = "Enter Text Here",
                 PlaceholderColor = Color.FromHex("749FA8"),
                 AutomationId = AutomationIdConstants.EntryAutomationID,

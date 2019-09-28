@@ -48,8 +48,8 @@
         <Reference Include="Java.Interop" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.2.0.608146-pre1" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="3.0.0" />
+        <PackageReference Include="Xamarin.Forms" Version="4.3.0.819712-pre2" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="3.1.0" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
