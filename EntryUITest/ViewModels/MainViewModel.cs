@@ -2,11 +2,8 @@
 {
     class MainViewModel : BaseViewModel
     {
-        #region Fields
-        string _emailKeyboardEntryText, _textLabelText;
-        #endregion
+        string _emailKeyboardEntryText = string.Empty, _textLabelText = string.Empty;
 
-        #region Properties
         public string TextLabelText
         {
             get => _textLabelText;
@@ -18,6 +15,5 @@
             get => _emailKeyboardEntryText;
             set => SetProperty(ref _emailKeyboardEntryText, value, () => TextLabelText = value);
         }
-        #endregion
     }
 }

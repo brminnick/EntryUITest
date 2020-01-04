@@ -1,10 +1,8 @@
-﻿using System.Linq;
-using NUnit.Framework;
-
-using Xamarin.UITest;
-
+﻿using System;
+using System.Linq;
 using EntryUITest.Shared;
-
+using NUnit.Framework;
+using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace EntryUITest.UITests
@@ -16,7 +14,9 @@ namespace EntryUITest.UITests
         readonly Query _myEntry, _myLabel;
         readonly Platform _platform;
 
-        IApp _app;
+        IApp? _app;
+
+        IApp App => _app ?? throw new NullReferenceException();
 
         public Tests(Platform platform)
         {
@@ -46,18 +46,18 @@ namespace EntryUITest.UITests
             string retrievedText;
 
             //Act
-            _app.EnterText(_myEntry, typedText);
-            _app.DismissKeyboard();
-            _app.Screenshot($"Entered Text: {typedText}");
+            App.EnterText(_myEntry, typedText);
+            App.DismissKeyboard();
+            App.Screenshot($"Entered Text: {typedText}");
 
             //Assert
-            retrievedText = _app.Query(_myLabel).First().Text;
+            retrievedText = App.Query(_myLabel).First().Text;
             Assert.AreEqual(typedText, retrievedText, "The typed text does not match the text displayed on the screen");
         }
 
         [Ignore("Repl for testing/development only")]
         [Test]
-        public void Repl() => _app.Repl();
+        public void Repl() => App.Repl();
     }
 }
 
