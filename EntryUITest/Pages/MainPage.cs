@@ -1,8 +1,7 @@
 ﻿using System;
-
-using Xamarin.Forms;
-
 using EntryUITest.Shared;
+using Xamarin.Forms;
+using Xamarin.Forms.Markup;
 
 namespace EntryUITest.Pages
 {
@@ -22,44 +21,34 @@ namespace EntryUITest.Pages
                 BackgroundColor = Color.FromHex("91E2F4"),
                 ReturnType = ReturnType.Done,
                 ReturnCommand = new Command(Unfocus)
-            };
-            goEntry.SetBinding(Entry.TextProperty, nameof(MainViewModel.EmailKeyboardEntryText));
+            }.Bind(Entry.TextProperty, nameof(MainViewModel.EmailKeyboardEntryText));
 
             var textLabel = new Label
             {
                 TextColor = Color.White,
                 AutomationId = AutomationIdConstants.LabelAutomationID,
                 HorizontalTextAlignment = TextAlignment.Center
-            };
-            textLabel.SetBinding(Label.TextProperty, nameof(MainViewModel.TextLabelText));
+            }.Bind(Label.TextProperty, nameof(MainViewModel.TextLabelText));
 
             Padding = GetPagePadding();
 
             var stackLayout = new StackLayout
             {
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
                 Children =
                 {
                     goEntry,
                     textLabel
                 }
-            };
+            }.CenterExpand();
 
-            Content = new ScrollView { Content = stackLayout };
+            Content = stackLayout;
         }
 
-        Thickness GetPagePadding()
+        Thickness GetPagePadding() => Device.RuntimePlatform switch
         {
-            switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                    return new Thickness(30, 20, 30, 5);
-                case Device.Android:
-                    return new Thickness(30, 0, 30, 5);
-                default:
-                    throw new NotSupportedException("Platform Unsupported");
-            }
-        }
+            Device.iOS => new Thickness(30, 20, 30, 5),
+            Device.Android => new Thickness(30, 0, 30, 5),
+            _ => throw new NotSupportedException("Platform Unsupported"),
+        };
     }
 }
