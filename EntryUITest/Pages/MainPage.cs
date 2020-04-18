@@ -32,7 +32,7 @@ namespace EntryUITest.Pages
 
             Padding = GetPagePadding();
 
-            var stackLayout = new StackLayout
+            Content = new StackLayout
             {
                 Children =
                 {
@@ -40,8 +40,6 @@ namespace EntryUITest.Pages
                     textLabel
                 }
             }.CenterExpand();
-
-            Content = stackLayout;
         }
 
         Thickness GetPagePadding() => Device.RuntimePlatform switch

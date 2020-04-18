@@ -2,7 +2,8 @@
 {
     class MainViewModel : BaseViewModel
     {
-        string _emailKeyboardEntryText = string.Empty, _textLabelText = string.Empty;
+        string _emailKeyboardEntryText = string.Empty;
+        string _textLabelText = string.Empty;
 
         public string TextLabelText
         {
