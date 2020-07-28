@@ -4,7 +4,7 @@ namespace EntryUITest
 {
     public class BaseContentPage<TViewModel> : ContentPage where TViewModel : BaseViewModel, new()
     {
-        public BaseContentPage(string title)
+        public BaseContentPage(in string title)
         {
             BindingContext = ViewModel;
             Title = title;

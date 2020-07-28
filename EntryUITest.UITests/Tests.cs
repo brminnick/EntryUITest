@@ -16,8 +16,6 @@ namespace EntryUITest.UITests
 
         IApp? _app;
 
-        IApp App => _app ?? throw new NullReferenceException();
-
         public Tests(Platform platform)
         {
             _platform = platform;
@@ -30,6 +28,8 @@ namespace EntryUITest.UITests
             _myEntry = x => x.Marked(AutomationIdConstants.EntryAutomationID);
             _myLabel = x => x.Marked(AutomationIdConstants.LabelAutomationID);
         }
+
+        IApp App => _app ?? throw new NullReferenceException();
 
         [SetUp]
         public void BeforeEachTest()

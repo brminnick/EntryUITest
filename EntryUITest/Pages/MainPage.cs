@@ -28,12 +28,14 @@ namespace EntryUITest.Pages
                         ReturnType = ReturnType.Done,
                         ReturnCommand = new Command(Unfocus)
                     }.Bind(Entry.TextProperty, nameof(MainViewModel.EmailKeyboardEntryText)),
+
                     new Label
                     {
                         TextColor = Color.White,
                         AutomationId = AutomationIdConstants.LabelAutomationID,
-                        HorizontalTextAlignment = TextAlignment.Center
-                    }.Bind(Label.TextProperty, nameof(MainViewModel.TextLabelText))
+                    }.TextCenter()
+                     .Bind(Label.TextProperty, nameof(MainViewModel.TextLabelText))
+                     
                 }
             }.CenterExpand();
         }
