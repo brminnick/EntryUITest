@@ -3,12 +3,12 @@ using Xamarin.UITest;
 
 namespace EntryUITest.UITests
 {
-    public static class AppInitializer
+    static class AppInitializer
     {
         public static IApp StartApp(Platform platform) => platform switch
         {
-            Platform.Android => ConfigureApp.Android.EnableLocalScreenshots().StartApp(),
-            Platform.iOS => ConfigureApp.iOS.EnableLocalScreenshots().StartApp(),
+            Platform.Android => ConfigureApp.Android.StartApp(),
+            Platform.iOS => ConfigureApp.iOS.StartApp(),
             _ => throw new NotSupportedException()
         };
     }

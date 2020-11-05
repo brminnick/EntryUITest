@@ -8,7 +8,7 @@
         <OutputType>Library</OutputType>
         <RootNamespace>EntryUITest.Droid</RootNamespace>
         <AssemblyName>EntryUITest.Droid</AssemblyName>
-        <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
         <AndroidApplication>True</AndroidApplication>
         <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
         <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -51,8 +51,8 @@
         <Reference Include="Java.Interop" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.1.1-pre1" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />

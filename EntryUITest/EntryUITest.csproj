@@ -11,8 +11,8 @@
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Xamarin.Forms" Version="4.8.0.1187-pre2" />
-	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="4.2.0" />
+	  <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
+	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
 	</ItemGroup>
 	<Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
 </Project>
