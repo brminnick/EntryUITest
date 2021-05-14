@@ -16,9 +16,6 @@
         <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
         <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
         <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <ProduceReferenceAssumbly>true</ProduceReferenceAssumbly>
         <AndroidTlsProvider>
         </AndroidTlsProvider>
     </PropertyGroup>
@@ -51,8 +48,8 @@
         <Reference Include="Java.Interop" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />

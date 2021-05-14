@@ -1,7 +1,7 @@
 ﻿using System;
 using EntryUITest.Shared;
 using Xamarin.Forms;
-using Xamarin.Forms.Markup;
+using Xamarin.CommunityToolkit.Markup;
 
 namespace EntryUITest.Pages
 {

@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryUITest", "EntryUITest\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EntryUITest.Shared", "EntryUITest.Shared\EntryUITest.Shared.shproj", "{A82B3489-376D-4B9A-ACE3-7DBCBC0348AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{790C2EAE-69D4-4C4F-B807-1DECD5490886}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EntryUITest.Shared\EntryUITest.Shared.projitems*{1af1da0e-563e-4b5b-95e4-177632d433f4}*SharedItemsImports = 4

@@ -7,10 +7,7 @@
         <OutputType>Library</OutputType>
         <RootNamespace>EntryUITest.UITests</RootNamespace>
         <AssemblyName>EntryUITest.UITests</AssemblyName>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <ProduceReferenceAssumbly>true</ProduceReferenceAssumbly>
-        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <DebugSymbols>true</DebugSymbols>
@@ -33,8 +30,8 @@
         <Reference Include="System" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.UITest" Version="3.0.8-dev2" />
-        <PackageReference Include="NUnit" Version="3.12.0" />
+        <PackageReference Include="Xamarin.UITest" Version="3.0.18" />
+        <PackageReference Include="NUnit" Version="3.13.2" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Tests.cs" />

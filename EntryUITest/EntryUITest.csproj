@@ -2,17 +2,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <ProduceReferenceAssumbly>true</ProduceReferenceAssumbly>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Folder Include="Pages\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
-	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
+	  <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+	  <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
+	  <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="1.2.0-pre2" />
 	</ItemGroup>
 	<Import Project="..\EntryUITest.Shared\EntryUITest.Shared.projitems" Label="Shared" Condition="Exists('..\EntryUITest.Shared\EntryUITest.Shared.projitems')" />
 </Project>

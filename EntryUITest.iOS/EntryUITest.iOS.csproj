@@ -9,9 +9,6 @@
         <RootNamespace>EntryUITest.iOS</RootNamespace>
         <AssemblyName>EmailKeyboard_UITestiOS</AssemblyName>
         <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-        <LangVersion>latest</LangVersion>
-        <Nullable>enable</Nullable>
-        <ProduceReferenceAssumbly>true</ProduceReferenceAssumbly>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
         <DebugSymbols>true</DebugSymbols>
@@ -94,9 +91,9 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.1558-pre3" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.0.2" />
-        <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.9" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
+        <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.22.2" />
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
