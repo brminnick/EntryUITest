@@ -92,7 +92,6 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
         <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.22.2" />
     </ItemGroup>
     <ItemGroup>
