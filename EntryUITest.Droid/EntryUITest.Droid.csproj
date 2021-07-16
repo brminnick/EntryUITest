@@ -48,7 +48,7 @@
         <Reference Include="Java.Interop" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />
