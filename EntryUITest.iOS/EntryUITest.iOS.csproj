@@ -91,8 +91,8 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
-        <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.22.2" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+        <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.23.1" />
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
@@ -120,6 +120,7 @@
         <ProjectReference Include="..\EntryUITest\EntryUITest.csproj">
             <Project>{C5C002D2-6129-429E-8776-7ABEBAE7138B}</Project>
             <Name>EntryUITest</Name>
+            <ReferenceSourceTarget></ReferenceSourceTarget>
         </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
